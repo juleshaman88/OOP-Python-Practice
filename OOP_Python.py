@@ -79,6 +79,22 @@ try:
 except TypeError as e:
     print(f"Caught unexpected exception! Tuples are immutable. Error: {e}")
 
+craig_tuple = student2.grades_tuple()
+print(f"Craig's grades as a tuple: {craig_tuple}")
+
+try:
+    craig_tuple[0] = 100
+except TypeError as e:
+    print(f"Caught unexpected exception! Tuples are immutable. Error: {e}")
+
+jules_tuple = student3.grades_tuple()
+print(f"Jules's grades as a tuple: {jules_tuple}")
+
+try:
+    jules_tuple[0] = 100
+except TypeError as e:
+    print(f"Caught unexpected exception! Tuples are immutable. Error: {e}")
+
 for student in [student1, student2, student3]:
     print(f"\nModifying grades for {student.name}...")
 
